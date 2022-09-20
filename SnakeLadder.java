@@ -16,11 +16,16 @@ public class SnakeLadder {
         //int dice = random.nextInt(6) + 1;// uc2
 
 
+        int count = 0; //uc6
         while (player != 100) {
+
             int dice = random.nextInt(6) + 1;// uc2
             int game = random.nextInt(3) + 1; // uc3
+            count++;
             switch (game) {
+
                 case 1:// uc4
+
                     player = player + 0;  // No Play Case
                     System.out.print(" No play! ");
                     System.out.println(" Score of Player is still => " + player);
@@ -28,27 +33,29 @@ public class SnakeLadder {
                     break;
 
                 case 2: //uc5
+
                     int temp = player;
                     player = player + dice; // Ladder Case
                     if (player > 100) {
-                        int zero =0;
-                        player =  zero + temp;
-                        System.out.print(" Dice shows: "+dice);
+                        int zero = 0;
+                        player = zero + temp;
+                        System.out.print(" Dice shows: " + dice);
                         System.out.println(" Try Again! ");
                         System.out.println(" New Score of Player is => " + player);
 
-                    } else if (player ==100) { //uc5
-                        System.out.print(" Dice shows: "+dice);
+                    } else if (player == 100) { //uc5
+                        System.out.print(" Dice shows: " + dice);
                         System.out.println(" New Score of Player is => " + player);
                         System.out.println("Player won!");
 
                     } else {
-                        System.out.print(" Dice shows: "+dice);
-                        System.out.println(" Its a Ladder! Move "+dice+" ahead!");
+                        System.out.print(" Dice shows: " + dice);
+                        System.out.println(" Its a Ladder! Move " + dice + " ahead!");
                         System.out.println(" New Score of Player is => " + player);
                         System.out.println("");
                         continue;
-                    }break;
+                    }
+                    break;
 
                 case 3:
 
@@ -57,24 +64,25 @@ public class SnakeLadder {
                     if (player <= 0) {
                         int tempp = 0;
                         player = tempp;
-                        System.out.print(" Dice shows: "+dice);
+                        System.out.print(" Dice shows: " + dice);
                         System.out.println(" Its a Snake! Go back 0(start) position");
                         System.out.println(" New Score of Player is => " + player);
                         System.out.println("");
                     } else {
-                        System.out.print(" Dice shows: "+dice);
-                        System.out.println(" Its a Snake! Go back "+dice+ " position");
+                        System.out.print(" Dice shows: " + dice);
+                        System.out.println(" Its a Snake! Go back " + dice + " position");
                         System.out.println(" New Score of Player is => " + player);
                         System.out.println("");
                         continue;
-                       }
-                            break;
                     }
-
-
+                    break;
             }
 
+
         }
+        System.out.println("Number of times Dice rolled: " + count);//uc6
+
+    }
     }
 
 
