@@ -16,6 +16,26 @@ public class SnakeLadder {
         int dice = random.nextInt(6)+1;// uc2
 
 
+        int game = random.nextInt(3)+1; // uc3
+
+        switch(game){
+            case 1:
+                player +=0;
+                System.out.println("New Score of Player is => "+player);
+                break;
+
+            case 2:
+                player = player + dice;
+                System.out.println("New Score of Player is => "+player);
+                break;
+
+            case 3:
+                player = player - 2 * dice;
+                System.out.println("New Score of Player is => "+player);
+                break;
+        }
+
+
 
 
     }
