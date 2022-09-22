@@ -32,7 +32,7 @@ public class SnakeLadder {
                 break;
 
             case 3:                                 // Snake Case
-                player = player - 2 * dice;
+                player = player - dice;
                 System.out.println("New Score of Player is => "+player);
                 break;
         }
