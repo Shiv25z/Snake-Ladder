@@ -17,19 +17,21 @@ public class SnakeLadder {
 
 
         int game = random.nextInt(3)+1; // uc3
-
+// 1: Noplay case
+// 2: Ladder Case
+// 3: Snake Case
         switch(game){
-            case 1:
+            case 1:                                 // No Play case
                 player +=0;
                 System.out.println("New Score of Player is => "+player);
                 break;
 
-            case 2:
+            case 2:                                 // Ladder Case
                 player = player + dice;
                 System.out.println("New Score of Player is => "+player);
                 break;
 
-            case 3:
+            case 3:                                 // Snake Case
                 player = player - 2 * dice;
                 System.out.println("New Score of Player is => "+player);
                 break;
